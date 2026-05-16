@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outlet Carrelage Provence – Carrelage & Travertin Avignon, Vaucluse</title>
+  <meta name="description" content="Spécialiste du carrelage, travertin et pierre naturelle en Provence. Showroom à Althen-des-Paluds, proche Avignon, Entraigues-sur-la-Sorgue et L'Isle-sur-la-Sorgue. Prix outlet, qualité premium.">
+  <meta name="keywords" content="carrelage Avignon, travertin Vaucluse, carrelage Entraigues-sur-la-Sorgue, magasin carrelage Provence, carrelage Althen-des-Paluds, pierre naturelle Provence, carrelage piscine Vaucluse, showroom carrelage Provence, carrelage L'Isle-sur-la-Sorgue">
+  <meta name="author" content="Outlet Carrelage Provence">
+  <meta property="og:title" content="Outlet Carrelage Provence – Spécialiste Carrelage & Travertin">
+  <meta property="og:description" content="Showroom premium à Althen-des-Paluds. Travertin, pierre naturelle, carrelage intérieur et extérieur. Prix outlet.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://outletcarrelageprovence.fr">
+  <link rel="canonical" href="https://outletcarrelageprovence.fr">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231A1A18'/><rect x='4' y='4' width='11' height='11' rx='1' fill='%23C9A96E'/><rect x='17' y='4' width='11' height='11' rx='1' fill='%23C9A96E' opacity='.6'/><rect x='4' y='17' width='11' height='11' rx='1' fill='%23C9A96E' opacity='.6'/><rect x='17' y='17' width='11' height='11' rx='1' fill='%23C9A96E'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── CSS VARIABLES ─── */
+    :root {
+      --cream:        #FDFAF6;
+      --travertin:    #F0E8DC;
+      --sable:        #DDD0BC;
+      --sable-dark:   #BCA98A;
+      --gold:         #C9A96E;
+      --gold-light:   #E2C896;
+      --gold-dark:    #9E7840;
+      --anthracite:   #2D2D2B;
+      --noir:         #1A1A18;
+      --mid:          #6B6560;
+      --light:        #F5EEE4;
+      --white:        #FFFFFF;
+      --shadow-sm:    0 2px 16px rgba(26,26,24,.06);
+      --shadow-md:    0 8px 40px rgba(26,26,24,.12);
+      --shadow-lg:    0 20px 80px rgba(26,26,24,.18);
+      --shadow-gold:  0 8px 40px rgba(201,169,110,.25);
+      --radius:       3px;
+      --radius-lg:    8px;
+      --ease:         cubic-bezier(.4,0,.2,1);
+      --ease-out:     cubic-bezier(0,0,.2,1);
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Jost', sans-serif;
+    }
+
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--anthracite);
+      overflow-x: hidden;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { border: none; cursor: pointer; font-family: var(--font-body); }
+
+    /* ─── LOADER ─── */
+    #loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--noir);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 24px;
+      transition: opacity .6s var(--ease), visibility .6s;
+    }
+    #loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-logo {
+      font-family: var(--font-display);
+      color: var(--cream);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 300;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      animation: fadeUp .8s var(--ease) both;
+    }
+    .loader-logo span { color: var(--gold); }
+    .loader-bar-wrap {
+      width: 160px; height: 1px;
+      background: rgba(255,255,255,.12);
+      position: relative; overflow: hidden;
+    }
+    .loader-bar {
+      position: absolute; left: -100%; top: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      animation: loadBar 1.6s var(--ease) .3s forwards;
+    }
+    @keyframes loadBar { to { left: 100%; } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+    /* ─── HEADER ─── */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 5vw;
+      height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .4s var(--ease), height .4s var(--ease), box-shadow .4s;
+    }
+    #header.scrolled {
+      background: rgba(253,250,246,.94);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      box-shadow: 0 1px 0 var(--sable), var(--shadow-sm);
+      height: 64px;
+    }
+    .header-logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      transition: color .4s;
+      line-height: 1.2;
+    }
+    #header.scrolled .header-logo { color: var(--noir); }
+    .header-logo span {
+      display: block; font-size: .55em; font-weight: 300;
+      letter-spacing: .25em; color: var(--gold); margin-top: 1px;
+    }
+    nav { display: flex; align-items: center; gap: 2.5rem; }
+    nav a {
+      font-size: .72rem; font-weight: 400; letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(253,250,246,.85);
+      position: relative; transition: color .3s;
+    }
+    #header.scrolled nav a { color: var(--mid); }
+    nav a::after {
+      content: ''; position: absolute; bottom: -3px; left: 0;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width .35s var(--ease);
+    }
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: var(--gold); }
+    #header.scrolled nav a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--noir) !important;
+      padding: .55rem 1.4rem;
+      font-size: .68rem !important;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 500 !important;
+      transition: background .3s, transform .2s !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px; cursor: pointer;
+      padding: 4px; background: transparent;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 1.5px;
+      background: var(--cream); transition: all .35s var(--ease);
+    }
+    #header.scrolled .hamburger span { background: var(--noir); }
+    .hamburger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile nav */
+    #mobile-nav {
+      position: fixed; inset: 0; z-index: 999;
+      background: var(--noir);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 2.5rem;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity .4s var(--ease), visibility .4s;
+    }
+    #mobile-nav.open { opacity: 1; visibility: visible; pointer-events: all; }
+    #mobile-nav a {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      font-weight: 300;
+      color: var(--cream);
+      letter-spacing: .05em;
+      transition: color .3s;
+    }
+    #mobile-nav a:hover { color: var(--gold); }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=90') center/cover no-repeat;
+      transform: scale(1.08);
+      transition: transform 8s ease-out;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,
+        rgba(26,26,24,.72) 0%,
+        rgba(26,26,24,.45) 50%,
+        rgba(26,26,24,.3) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto; padding: 0 5vw;
+      padding-top: 76px;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .68rem; font-weight: 400; letter-spacing: .28em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1.5rem;
+      animation: heroFadeIn .8s var(--ease) .8s both;
+    }
+    .hero-tag::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--gold);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7.5vw, 7.5rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.0;
+      margin-bottom: 1.2rem;
+      animation: heroFadeIn .9s var(--ease) 1s both;
+    }
+    .hero-title em {
+      font-style: italic; color: var(--gold-light);
+      display: block;
+    }
+    .hero-sub {
+      font-size: clamp(.9rem, 1.8vw, 1.1rem);
+      font-weight: 200;
+      color: rgba(253,250,246,.75);
+      max-width: 520px;
+      margin-bottom: 2.8rem;
+      letter-spacing: .04em;
+      animation: heroFadeIn .9s var(--ease) 1.2s both;
+    }
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      animation: heroFadeIn .9s var(--ease) 1.4s both;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--noir);
+      padding: 1rem 2.4rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .2em;
+      text-transform: uppercase;
+      transition: background .3s, transform .25s, box-shadow .3s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+    .btn-outline {
+      border: 1px solid rgba(253,250,246,.5);
+      color: var(--cream);
+      padding: 1rem 2.4rem;
+      font-size: .72rem; font-weight: 400; letter-spacing: .2em;
+      text-transform: uppercase;
+      transition: border-color .3s, background .3s, transform .25s;
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      z-index: 2;
+      animation: heroFadeIn 1s var(--ease) 2s both;
+    }
+    .hero-scroll span {
+      font-size: .6rem; letter-spacing: .25em; text-transform: uppercase;
+      color: rgba(253,250,246,.5);
+    }
+    .scroll-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, rgba(253,250,246,.4), transparent);
+      animation: scrollLine 2s ease-in-out 2s infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { opacity: .4; }
+      50% { opacity: 1; }
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    /* ─── SECTION UTILITIES ─── */
+    section { position: relative; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+    .section-pad { padding: 8rem 0; }
+    .section-pad-sm { padding: 5rem 0; }
+
+    .section-label {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: .65rem; font-weight: 400; letter-spacing: .3em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 28px; height: 1px; background: var(--gold);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-weight: 300;
+      color: var(--noir);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-text {
+      font-size: 1rem; font-weight: 300;
+      color: var(--mid); line-height: 1.8;
+      max-width: 620px;
+    }
+
+    /* Fade-in on scroll */
+    .reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ─── ABOUT ─── */
+    #about { background: var(--cream); }
+    .about-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 7rem; align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-image-main {
+      width: 100%; aspect-ratio: 4/5;
+      overflow: hidden;
+    }
+    .about-image-inset {
+      position: absolute;
+      bottom: -2.5rem; right: -2.5rem;
+      width: 55%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border: 6px solid var(--cream);
+      box-shadow: var(--shadow-md);
+    }
+    .about-badge {
+      position: absolute;
+      top: 2rem; left: -2rem;
+      background: var(--gold);
+      color: var(--noir);
+      padding: 1.4rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .about-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2.2rem; font-weight: 600;
+      line-height: 1;
+    }
+    .about-badge span {
+      font-size: .6rem; letter-spacing: .2em;
+      text-transform: uppercase; font-weight: 500;
+    }
+    .about-pills {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      margin-top: 2rem;
+    }
+    .pill {
+      background: var(--travertin);
+      border: 1px solid var(--sable);
+      color: var(--mid);
+      padding: .4rem 1rem;
+      font-size: .65rem; letter-spacing: .18em;
+      text-transform: uppercase; font-weight: 400;
+    }
+
+    /* ─── COLLECTIONS ─── */
+    #collections { background: var(--light); }
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 4rem;
+    }
+    .card {
+      background: var(--cream);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+    .card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .card-img img {
+      transition: transform .7s var(--ease);
+    }
+    .card:hover .card-img img { transform: scale(1.07); }
+    .card-body { padding: 1.6rem; }
+    .card-cat {
+      font-size: .6rem; letter-spacing: .25em; text-transform: uppercase;
+      color: var(--gold); font-weight: 400; margin-bottom: .5rem;
+    }
+    .card-name {
+      font-family: var(--font-display);
+      font-size: 1.45rem; font-weight: 400;
+      color: var(--noir); margin-bottom: .5rem;
+    }
+    .card-desc {
+      font-size: .82rem; color: var(--mid);
+      font-weight: 300; line-height: 1.7;
+    }
+    .card-arrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .65rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold);
+      margin-top: 1rem; font-weight: 400;
+      transition: gap .3s;
+    }
+    .card:hover .card-arrow { gap: 14px; }
+
+    /* ─── GALLERY ─── */
+    #gallery { background: var(--noir); padding: 8rem 0; }
+    #gallery .section-title { color: var(--cream); }
+    #gallery .section-text { color: rgba(253,250,246,.55); }
+    .gallery-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 3.5rem;
+    }
+    .gallery-grid {
+      columns: 3 300px;
+      column-gap: 1rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform .6s var(--ease);
+    }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(26,26,24,.5);
+      opacity: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity .4s;
+    }
+    .gallery-overlay-icon {
+      width: 48px; height: 48px;
+      border: 1px solid rgba(253,250,246,.6);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transform: scale(.6);
+      transition: transform .4s var(--ease);
+    }
+    .gallery-overlay-icon svg { width: 20px; height: 20px; stroke: var(--cream); }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-item:hover .gallery-overlay-icon { transform: scale(1); }
+    .gallery-item-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.2rem 1rem .8rem;
+      background: linear-gradient(to top, rgba(26,26,24,.7), transparent);
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(253,250,246,.8); font-weight: 400;
+      transform: translateY(4px); opacity: 0;
+      transition: transform .4s, opacity .4s;
+    }
+    .gallery-item:hover .gallery-item-label { transform: none; opacity: 1; }
+
+    /* ─── LIGHTBOX ─── */
+    #lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(26,26,24,.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity .4s, visibility .4s;
+    }
+    #lightbox.open { opacity: 1; visibility: visible; pointer-events: all; }
+    #lightbox img {
+      max-width: 90vw; max-height: 90vh;
+      width: auto; height: auto;
+      object-fit: contain;
+      box-shadow: 0 0 80px rgba(0,0,0,.5);
+    }
+    .lightbox-close {
+      position: absolute; top: 2rem; right: 2rem;
+      width: 44px; height: 44px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: border-color .3s;
+      background: transparent;
+    }
+    .lightbox-close:hover { border-color: var(--gold); }
+    .lightbox-close svg { width: 16px; height: 16px; stroke: var(--cream); }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: border-color .3s, background .3s;
+      background: transparent;
+    }
+    .lightbox-nav:hover { border-color: var(--gold); background: rgba(201,169,110,.1); }
+    .lightbox-nav svg { width: 18px; height: 18px; stroke: var(--cream); }
+    #lb-prev { left: 2rem; }
+    #lb-next { right: 2rem; }
+
+    /* ─── STATS ─── */
+    #stats { background: var(--travertin); border-top: 1px solid var(--sable); border-bottom: 1px solid var(--sable); }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      divide-x: 1px solid var(--sable);
+    }
+    .stat-item {
+      text-align: center;
+      padding: 4rem 2rem;
+      border-right: 1px solid var(--sable);
+      position: relative;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--gold-dark);
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .stat-num sup { font-size: .4em; vertical-align: super; }
+    .stat-label {
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--mid);
+      font-weight: 400;
+    }
+
+    /* ─── REVIEWS ─── */
+    #reviews { background: var(--cream); overflow: hidden; }
+    .reviews-top {
+      display: flex; align-items: center; gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+    .reviews-score {
+      display: flex; align-items: baseline; gap: .4rem;
+    }
+    .score-big {
+      font-family: var(--font-display);
+      font-size: 4.5rem; font-weight: 300;
+      color: var(--gold-dark); line-height: 1;
+    }
+    .score-total { font-size: .8rem; color: var(--mid); font-weight: 300; }
+    .stars { display: flex; gap: 3px; color: var(--gold); font-size: 1rem; }
+    .reviews-track-wrap {
+      overflow: hidden; position: relative;
+    }
+    .reviews-track {
+      display: flex; gap: 1.5rem;
+      transition: transform .6s var(--ease);
+    }
+    .review-card {
+      flex: 0 0 calc(33.333% - 1rem);
+      min-width: 0;
+      background: var(--travertin);
+      border: 1px solid var(--sable);
+      padding: 2rem;
+      position: relative;
+    }
+    .review-quote {
+      font-size: 3rem; font-family: var(--font-display);
+      color: var(--gold); line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .review-text {
+      font-size: .88rem; color: var(--anthracite);
+      line-height: 1.7; font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    .review-footer {
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .review-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--sable);
+      overflow: hidden; flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: 1.1rem; color: var(--mid);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .review-name {
+      font-size: .75rem; font-weight: 500;
+      letter-spacing: .05em;
+    }
+    .review-meta { font-size: .68rem; color: var(--mid); font-weight: 300; }
+    .slider-dots {
+      display: flex; gap: 8px; justify-content: center;
+      margin-top: 2.5rem;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--sable);
+      cursor: pointer;
+      transition: background .3s, transform .3s;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.4); }
+
+    /* ─── WHY US ─── */
+    #why { background: var(--light); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; margin-top: 4rem;
+    }
+    .why-card {
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--sable);
+      background: var(--cream);
+      position: relative;
+      transition: transform .4s var(--ease), box-shadow .4s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .why-icon {
+      width: 52px; height: 52px;
+      background: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .why-icon svg { width: 22px; height: 22px; stroke: var(--noir); fill: none; stroke-width: 1.5; }
+    .why-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem; font-weight: 400;
+      color: var(--noir); margin-bottom: .6rem;
+    }
+    .why-desc { font-size: .82rem; color: var(--mid); font-weight: 300; line-height: 1.7; }
+
+    /* ─── CTA ─── */
+    #cta {
+      background: var(--noir);
+      text-align: center;
+      padding: 8rem 5vw;
+      position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1920&q=60') center/cover no-repeat;
+      opacity: .15;
+    }
+    #cta .section-label { justify-content: center; }
+    #cta .section-title { color: var(--cream); text-align: center; }
+    #cta .section-text {
+      color: rgba(253,250,246,.55);
+      text-align: center; margin: 0 auto 2.5rem;
+    }
+    .cta-btns {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: center; position: relative;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact { background: var(--cream); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+    .contact-info > * + * { margin-top: 1.5rem; }
+    .info-item {
+      display: flex; gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .info-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--travertin);
+      border: 1px solid var(--sable);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .info-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .info-label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 400; }
+    .info-val { font-size: .92rem; color: var(--anthracite); font-weight: 300; line-height: 1.6; }
+    .info-val a { color: var(--anthracite); transition: color .3s; }
+    .info-val a:hover { color: var(--gold); }
+
+    .map-wrap {
+      margin-top: 2rem;
+      height: 260px;
+      overflow: hidden;
+      border: 1px solid var(--sable);
+    }
+    .map-wrap iframe {
+      width: 100%; height: 100%; border: none;
+      filter: grayscale(.4) sepia(.15);
+    }
+
+    /* Contact Form */
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    label {
+      font-size: .62rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--mid); font-weight: 400;
+    }
+    input, textarea, select {
+      font-family: var(--font-body);
+      font-size: .88rem; font-weight: 300;
+      background: var(--travertin);
+      border: 1px solid var(--sable);
+      color: var(--anthracite);
+      padding: .9rem 1.1rem;
+      outline: none;
+      transition: border-color .3s;
+      resize: vertical;
+      width: 100%;
+    }
+    input:focus, textarea:focus { border-color: var(--gold); }
+    textarea { min-height: 120px; }
+    .form-submit {
+      background: var(--gold);
+      color: var(--noir);
+      padding: 1.1rem;
+      font-size: .72rem; font-weight: 500; letter-spacing: .22em;
+      text-transform: uppercase;
+      transition: background .3s, transform .25s;
+    }
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .form-notice {
+      font-size: .72rem; color: var(--mid); font-weight: 300;
+      text-align: center;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--noir);
+      color: rgba(253,250,246,.55);
+      padding: 5rem 0 2rem;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+    }
+    .footer-brand .logo-f {
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-weight: 400;
+      color: var(--cream); letter-spacing: .08em;
+      text-transform: uppercase; margin-bottom: .5rem;
+    }
+    .footer-brand .slogan {
+      font-size: .72rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 300; margin-bottom: 1.2rem;
+    }
+    .footer-brand p {
+      font-size: .82rem; font-weight: 300; line-height: 1.7;
+    }
+    .socials { display: flex; gap: .8rem; margin-top: 1.5rem; }
+    .social-link {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,.12);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .3s, background .3s;
+    }
+    .social-link:hover { border-color: var(--gold); background: rgba(201,169,110,.1); }
+    .social-link svg { width: 15px; height: 15px; fill: rgba(253,250,246,.6); transition: fill .3s; }
+    .social-link:hover svg { fill: var(--gold); }
+    .footer-col h4 {
+      font-size: .65rem; letter-spacing: .25em;
+      text-transform: uppercase; color: var(--cream);
+      font-weight: 400; margin-bottom: 1.2rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a {
+      font-size: .82rem; color: rgba(253,250,246,.5);
+      font-weight: 300; transition: color .3s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; font-weight: 300; }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    #whatsapp-btn {
+      position: fixed; bottom: 2rem; right: 2rem;
+      z-index: 900;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.4);
+      transition: transform .3s var(--ease), box-shadow .3s;
+      animation: wpPulse 3s ease infinite 2s;
+    }
+    #whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,.5); }
+    #whatsapp-btn svg { width: 28px; height: 28px; fill: white; }
+    @keyframes wpPulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.4); }
+      50% { box-shadow: 0 4px 32px rgba(37,211,102,.65), 0 0 0 8px rgba(37,211,102,.08); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .collections-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner { grid-template-columns: 1fr; gap: 4rem; }
+      .about-image-wrap { max-width: 520px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--sable); }
+      .stat-item:nth-child(odd) { border-right: 1px solid var(--sable); }
+      .gallery-grid { columns: 2 200px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .reviews-track { }
+      .review-card { flex: 0 0 calc(100% - 1.5rem); }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .collections-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .about-image-inset { display: none; }
+      .about-badge { display: none; }
+      .gallery-grid { columns: 1; }
+      .section-pad { padding: 5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── LOADER ─── -->
+<div id="loader">
+  <div class="loader-logo">Outlet Carrelage <span>Provence</span></div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- ─── HEADER ─── -->
+<header id="header">
+  <a href="#hero" class="header-logo">
+    Outlet Carrelage<span>Provence</span>
+  </a>
+  <nav>
+    <a href="#about">À Propos</a>
+    <a href="#collections">Collections</a>
+    <a href="#gallery">Inspirations</a>
+    <a href="#reviews">Avis Clients</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:0632911377" class="nav-cta">06 32 91 13 77</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ─── MOBILE NAV ─── -->
+<div id="mobile-nav">
+  <a href="#about" class="mobile-link">À Propos</a>
+  <a href="#collections" class="mobile-link">Collections</a>
+  <a href="#gallery" class="mobile-link">Inspirations</a>
+  <a href="#reviews" class="mobile-link">Avis</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Showroom · Althen-des-Paluds · Vaucluse</div>
+    <h1 class="hero-title">
+      Outlet Carrelage<br>
+      <em>Provence</em>
+    </h1>
+    <p class="hero-sub">Le spécialiste du carrelage, travertin et pierre naturelle en Provence. Qualité premium, prix outlet.</p>
+    <div class="hero-btns">
+      <a href="#collections" class="btn-primary">Découvrir nos collections</a>
+      <a href="#contact" class="btn-outline">Demander un devis</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Découvrir</span>
+  </div>
+</section>
+
+<!-- ─── À PROPOS ─── -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-main">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=85" alt="Showroom carrelage Provence Althen-des-Paluds">
+        </div>
+        <div class="about-image-inset">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=85" alt="Carrelage travertin Vaucluse">
+        </div>
+        <div class="about-badge">
+          <strong>10<sup>+</sup></strong>
+          <span>Ans d'expertise</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label reveal">Notre histoire</div>
+        <h2 class="section-title reveal reveal-delay-1">L'art du<br><em>carrelage provençal</em></h2>
+        <p class="section-text reveal reveal-delay-2">
+          Implanté à Althen-des-Paluds, au cœur de la Provence, notre showroom accueille les particuliers et professionnels de tout le Vaucluse — Entraigues-sur-la-Sorgue, Avignon, Carpentras, L'Isle-sur-la-Sorgue, Orange.
+        </p>
+        <p class="section-text reveal reveal-delay-3" style="margin-top:1rem;">
+          Spécialistes du carrelage intérieur et extérieur, du travertin et de la pierre naturelle, nous proposons un accompagnement personnalisé de la conception à la pose. Notre concept outlet vous garantit l'accès aux plus belles matières à des prix compétitifs.
+        </p>
+        <div class="about-pills reveal reveal-delay-4">
+          <span class="pill">Travertin</span>
+          <span class="pill">Pierre naturelle</span>
+          <span class="pill">Carrelage piscine</span>
+          <span class="pill">Grand format</span>
+          <span class="pill">Imitation bois</span>
+          <span class="pill">Margelles</span>
+          <span class="pill">Faïence</span>
+          <span class="pill">Dallage extérieur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COLLECTIONS ─── -->
+<section id="collections" class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Nos collections</div>
+    <h2 class="section-title reveal reveal-delay-1">Matières d'exception<br><em>pour chaque projet</em></h2>
+
+    <div class="collections-grid">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1610890690846-5149750c8ae1?auto=format&fit=crop&w=700&q=85" alt="Travertin Provence Vaucluse">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Matière naturelle</div>
+          <div class="card-name">Travertin</div>
+          <p class="card-desc">Le noble calcaire veiné qui incarne l'élégance méditerranéenne. Sols, murs, terrasses et plages de piscine.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-2">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=85" alt="Carrelage effet béton Avignon">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Tendance design</div>
+          <div class="card-name">Effet béton</div>
+          <p class="card-desc">Minimalisme contemporain et textures industrielles raffinées. Le béton sans les contraintes, la modernité sans compromis.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-3">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1557804483-ef3a71f9f66e?auto=format&fit=crop&w=700&q=85" alt="Carrelage imitation bois Vaucluse">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Chaleur naturelle</div>
+          <div class="card-name">Imitation bois</div>
+          <p class="card-desc">La douceur du bois, la durabilité du grès cérame. Idéal pour intérieurs et extérieurs, ambiances chaleureuses garanties.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?auto=format&fit=crop&w=700&q=85" alt="Pierre naturelle Provence">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Authenticité brute</div>
+          <div class="card-name">Pierre naturelle</div>
+          <p class="card-desc">Calcaire, ardoise, granit… Des matières millénaires aux textures uniques, pour des espaces inoubliables.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-1">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=700&q=85" alt="Carrelage extérieur terrasse Provence">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espaces extérieurs</div>
+          <div class="card-name">Carrelage extérieur</div>
+          <p class="card-desc">Terrasses, allées, plages de piscine. Formats généreux antidérapants, résistants au gel et aux UV provençaux.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-2">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=700&q=85" alt="Carrelage piscine Vaucluse Avignon">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Aquatique & margelles</div>
+          <div class="card-name">Carrelage piscine</div>
+          <p class="card-desc">Mosaïques, carreaux traités, margelles et plages. Tout pour créer un espace piscine de rêve en Provence.</p>
+          <div class="card-arrow">Explorer →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GALERIE ─── -->
+<section id="gallery">
+  <div class="container">
+    <div class="gallery-header">
+      <div>
+        <div class="section-label" style="color:var(--gold);">Inspirations</div>
+        <h2 class="section-title reveal">Réalisations<br><em>& projets</em></h2>
+      </div>
+      <p class="section-text reveal" style="max-width:320px; text-align:right;">
+        De la villa provençale au loft contemporain, nos matériaux subliment chaque espace.
+      </p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=600&q=80" alt="Salle de bain travertin Avignon" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Salle de bain travertin</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80" alt="Cuisine carrelage moderne Provence" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Cuisine grand format</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Piscine carrelage Vaucluse" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Piscine mosaïque</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Salle de bain luxe Provence" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Salle de bain luxe</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80" alt="Terrasse villa provençale" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Terrasse provençale</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Salon carrelage grand format Avignon" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Salon grand format</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Salle de bain épurée Vaucluse" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Salle de bain épurée</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80" alt="Villa moderne Provence" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Villa contemporaine</div>
+      </div>
+
+      <div class="gallery-item" data-src="https://images.unsplash.com/photo-1613490493576-7b7dc52d3a3e?auto=format&fit=crop&w=1200&q=90">
+        <img src="https://images.unsplash.com/photo-1613490493576-7b7dc52d3a3e?auto=format&fit=crop&w=600&q=80" alt="Luxe villa Provence piscine" loading="lazy">
+        <div class="gallery-overlay"><div class="gallery-overlay-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+        <div class="gallery-item-label">Villa avec piscine</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LIGHTBOX ─── -->
+<div id="lightbox">
+  <button class="lightbox-close" id="lb-close"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12" stroke-linecap="round"/></svg></button>
+  <button class="lightbox-nav" id="lb-prev"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <img id="lb-img" src="" alt="Galerie Outlet Carrelage Provence">
+  <button class="lightbox-nav" id="lb-next"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+
+<!-- ─── STATS ─── -->
+<section id="stats" class="section-pad-sm">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num" data-target="90" data-suffix="+">0</div>
+        <div class="stat-label">Avis clients</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num" data-target="500" data-suffix="+">0</div>
+        <div class="stat-label">Références en stock</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num" data-target="100" data-suffix="+">0</div>
+        <div class="stat-label">Projets réalisés</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num" style="font-size:clamp(1.8rem,3vw,2.8rem);color:var(--gold-dark);">Provence</div>
+        <div class="stat-label">Showroom en cœur de</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AVIS CLIENTS ─── -->
+<section id="reviews" class="section-pad">
+  <div class="container">
+    <div class="reviews-top reveal">
+      <div>
+        <div class="section-label">Témoignages</div>
+        <h2 class="section-title" style="margin-bottom:0">Avis <em>clients</em></h2>
+      </div>
+      <div style="margin-left:auto; text-align:center;">
+        <div class="reviews-score">
+          <div class="score-big">4.9</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="score-total">sur +90 avis Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-track-wrap">
+      <div class="reviews-track" id="reviews-track">
+
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">Venu de Nice pour trouver un travertin de qualité pour notre villa, j'ai été époustouflé par la variété et la beauté des produits. Accueil chaleureux, conseils expertisés. Je recommande vivement ce showroom.</p>
+          <div class="review-footer">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Marc A.</div>
+              <div class="review-meta">Nice · Travertin extérieur ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-quote">"</div>
+          <p class="review-text">Rénovation complète de notre salle de bain avec les carreaux effet marbre. Le résultat est spectaculaire ! Rapport qualité/prix imbattable, et l'équipe nous a guidés parfaitement dans nos choix.</p>
+          <div class="review-footer">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Sophie L.</div>
+              <div class="review-meta">Avignon · Salle de bain ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-quote">"</div>
+          <p class="review-text">Le meilleur magasin de carrelage du Vaucluse. Carrelage pour notre piscine et la plage, margelles travertin — tout est parfait. Prix outlet vraiment compétitifs par rapport aux grandes surfaces.</p>
+          <div class="review-footer">
+            <div class="review-avatar">P</div>
+            <div>
+              <div class="review-name">Pierre G.</div>
+              <div class="review-meta">L'Isle-sur-la-Sorgue · Piscine ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p class="review-text">Personnel passionné et à l'écoute. J'ai trouvé exactement le carrelage grand format que je cherchais pour mon salon. Livraison rapide et soignée. Je reviendrai pour ma terrasse !</p>
+          <div class="review-footer">
+            <div class="review-avatar">C</div>
+            <div>
+              <div class="review-name">Claire M.</div>
+              <div class="review-meta">Carpentras · Grand format ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p class="review-text">Showroom magnifique avec une sélection haut de gamme. Nous avons carrelé notre villa en pierre naturelle, le résultat dépasse toutes nos attentes. Prix déstockage très attractifs.</p>
+          <div class="review-footer">
+            <div class="review-avatar">A</div>
+            <div>
+              <div class="review-name">Arnaud V.</div>
+              <div class="review-meta">Entraigues-sur-la-Sorgue · Villa ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">"</div>
+          <p class="review-text">On cherchait un carrelage imitation bois résistant pour notre terrasse en Provence. Parfaitement conseillés, nous avons trouvé exactement ce qu'il fallait. Qualité irréprochable après 2 ans d'utilisation !</p>
+          <div class="review-footer">
+            <div class="review-avatar">J</div>
+            <div>
+              <div class="review-name">Julie et Thomas R.</div>
+              <div class="review-meta">Orange · Terrasse imitation bois ★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="slider-dots" id="slider-dots"></div>
+  </div>
+</section>
+
+<!-- ─── POURQUOI NOUS ─── -->
+<section id="why" class="section-pad">
+  <div class="container">
+    <div style="text-align:center; max-width:600px; margin:0 auto 1rem;">
+      <div class="section-label reveal" style="justify-content:center;">Nos engagements</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">Pourquoi nous<br><em>choisir ?</em></h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div class="why-title">Stock disponible</div>
+        <p class="why-desc">Plus de 500 références en stock permanent. Pas d'attente, livraison ou emport immédiat pour vos chantiers.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="why-title">Conseils personnalisés</div>
+        <p class="why-desc">Notre équipe vous accompagne dans chaque étape de votre projet, du choix des matières à la pose.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="why-title">Prix outlet</div>
+        <p class="why-desc">Destockage de collections premium. Profitez de tarifs professionnels sur des matériaux d'exception.</p>
+      </div>
+
+      <div class="why-card reveal">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8zM5.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
+        </div>
+        <div class="why-title">Livraison possible</div>
+        <p class="why-desc">Livraison sur toute la région PACA. Vaucluse, Bouches-du-Rhône, Gard — nous gérons la logistique.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-title">Qualité premium</div>
+        <p class="why-desc">Sélection rigoureuse de fournisseurs italiens et européens. Certification, résistance, esthétisme — sans compromis.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="why-title">Suivi de projet</div>
+        <p class="why-desc">De la visite showroom à la livraison, un interlocuteur unique vous accompagne tout au long de votre projet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section id="cta">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-label reveal" style="justify-content:center;">Passez à l'action</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center; color:var(--cream);">
+      Votre projet mérite<br><em>les plus belles matières</em>
+    </h2>
+    <p class="section-text reveal reveal-delay-2" style="color:rgba(253,250,246,.55); text-align:center; margin:0 auto 2.5rem;">
+      Visitez notre showroom à Althen-des-Paluds ou contactez-nous pour un devis personnalisé. Notre équipe vous répond du lundi au samedi.
+    </p>
+    <div class="cta-btns reveal reveal-delay-3">
+      <a href="tel:0632911377" class="btn-primary">Appeler maintenant</a>
+      <a href="#contact" class="btn-outline" style="border-color:rgba(253,250,246,.3); color:var(--cream);">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="section-label reveal">Nous trouver</div>
+    <h2 class="section-title reveal reveal-delay-1">Venez nous <em>rendre visite</em></h2>
+
+    <div class="contact-grid" style="margin-top:3.5rem;">
+      <div class="contact-info reveal">
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Adresse</div>
+            <div class="info-val">50 Route de la Forêt<br>84210 Althen-des-Paluds<br><small style="color:var(--gold);font-size:.75rem;">Proche Entraigues, Avignon, L'Isle-sur-la-Sorgue</small></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.1 2.9 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.09 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Téléphone</div>
+            <div class="info-val"><a href="tel:0632911377">06 32 91 13 77</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Horaires d'ouverture</div>
+            <div class="info-val">
+              Lundi – Vendredi : 9h–12h / 14h–18h<br>
+              Samedi : 9h–17h<br>
+              <span style="color:var(--mid); font-size:.8rem;">Dimanche : Fermé</span>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Site web</div>
+            <div class="info-val"><a href="https://outletcarrelageprovence.fr" target="_blank">outletcarrelageprovence.fr</a></div>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=4.9450%2C43.9700%2C5.0050%2C44.0050&layer=mapnik&marker=43.9860%2C4.9740"
+            title="Outlet Carrelage Provence – Althen-des-Paluds"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <p style="font-size:.82rem; color:var(--mid); margin-bottom:2rem; font-weight:300; line-height:1.7;">
+          Remplissez ce formulaire et nous vous recontactons dans les 24h pour établir votre devis personnalisé.
+        </p>
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="tel" placeholder="06 xx xx xx xx">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
+          </div>
+          <div class="form-group">
+            <label for="sujet">Type de projet</label>
+            <select id="sujet" name="sujet">
+              <option value="">Sélectionner…</option>
+              <option>Salle de bain</option>
+              <option>Cuisine</option>
+              <option>Terrasse / Extérieur</option>
+              <option>Piscine & margelles</option>
+              <option>Salon / Grand format</option>
+              <option>Projet complet</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Votre projet</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet : surface, style souhaité, budget…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+          <p class="form-notice" id="form-success" style="display:none; color:var(--gold);">✓ Votre message a bien été envoyé. Nous vous contactons rapidement !</p>
+          <p class="form-notice">Réponse garantie sous 24h · 06 32 91 13 77</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-f">Outlet Carrelage Provence</div>
+        <div class="slogan">L'élégance du carrelage en Provence</div>
+        <p>Showroom spécialisé dans le carrelage, le travertin et la pierre naturelle. Situé à Althen-des-Paluds, nous servons toute la Provence : Avignon, Entraigues, L'Isle-sur-la-Sorgue, Carpentras, Orange.</p>
+        <div class="socials">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/33632911377" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#gallery">Inspirations</a></li>
+          <li><a href="#reviews">Avis clients</a></li>
+          <li><a href="#contact">Contact & devis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nos produits</h4>
+        <ul>
+          <li><a href="#collections">Travertin</a></li>
+          <li><a href="#collections">Pierre naturelle</a></li>
+          <li><a href="#collections">Carrelage piscine</a></li>
+          <li><a href="#collections">Imitation bois</a></li>
+          <li><a href="#collections">Grand format</a></li>
+          <li><a href="#collections">Carrelage extérieur</a></li>
+          <li><a href="#collections">Faïence & salle de bain</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0632911377">06 32 91 13 77</a></li>
+          <li><a href="#">50 Route de la Forêt</a></li>
+          <li><a href="#">84210 Althen-des-Paluds</a></li>
+          <li style="margin-top:.5rem; font-size:.78rem; color:rgba(253,250,246,.3); line-height:1.6;">
+            Lun–Ven : 9h–12h / 14h–18h<br>
+            Sam : 9h–17h
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Outlet Carrelage Provence · Tous droits réservés</p>
+      <p style="color:rgba(253,250,246,.3); font-size:.68rem; letter-spacing:.1em;">outletcarrelageprovence.fr · Althen-des-Paluds, Vaucluse</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── WHATSAPP FLOAT ─── -->
+<a id="whatsapp-btn" href="https://wa.me/33632911377?text=Bonjour%2C%20je%20souhaite%20obtenir%20un%20devis%20pour%20mon%20projet%20carrelage." target="_blank" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+  /* ── LOADER ── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+      // Hero parallax kickoff
+      document.querySelector('.hero-bg').style.transform = 'scale(1)';
+    }, 1800);
+  });
+
+  /* ── HEADER SCROLL ── */
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  /* ── HAMBURGER MENU ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-link').forEach(l => {
+    l.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ── SCROLL REVEAL ── */
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  /* ── COUNTER ANIMATION ── */
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.target;
+      const suffix = el.dataset.suffix || '';
+      if (!target) return;
+      let start = 0;
+      const duration = 1800;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(ease * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+  /* ── HERO PARALLAX ── */
+  const heroBg = document.getElementById('hero-bg');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (scrolled < window.innerHeight) {
+      heroBg.style.transform = `scale(1.08) translateY(${scrolled * 0.22}px)`;
+    }
+  }, { passive: true });
+
+  /* ── LIGHTBOX ── */
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const galleryItems = document.querySelectorAll('.gallery-item[data-src]');
+  let lbIndex = 0;
+  const imgs = Array.from(galleryItems).map(el => el.dataset.src);
+
+  function openLightbox(idx) {
+    lbIndex = idx;
+    lbImg.src = imgs[idx];
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function navLightbox(dir) {
+    lbIndex = (lbIndex + dir + imgs.length) % imgs.length;
+    lbImg.style.opacity = '0';
+    lbImg.style.transform = `translateX(${dir * 20}px)`;
+    setTimeout(() => {
+      lbImg.src = imgs[lbIndex];
+      lbImg.style.transition = 'opacity .3s, transform .3s';
+      lbImg.style.opacity = '1';
+      lbImg.style.transform = 'none';
+    }, 180);
+  }
+
+  galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => navLightbox(-1));
+  document.getElementById('lb-next').addEventListener('click', () => navLightbox(1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+  });
+
+  /* ── REVIEWS SLIDER ── */
+  const track = document.getElementById('reviews-track');
+  const dotsContainer = document.getElementById('slider-dots');
+  const cards = track.querySelectorAll('.review-card');
+  const visibleCount = () => window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+  let currentSlide = 0;
+  let totalSlides = Math.ceil(cards.length / visibleCount());
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    totalSlides = Math.ceil(cards.length / visibleCount());
+    for (let i = 0; i < totalSlides; i++) {
+      const d = document.createElement('button');
+      d.className = 'dot' + (i === currentSlide ? ' active' : '');
+      d.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(d);
+    }
+  }
+
+  function goToSlide(idx) {
+    currentSlide = idx;
+    const cardWidth = cards[0].offsetWidth + 24; // gap
+    track.style.transform = `translateX(-${idx * visibleCount() * cardWidth}px)`;
+    dotsContainer.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  buildDots();
+  window.addEventListener('resize', () => { buildDots(); goToSlide(0); });
+
+  // Auto-slide
+  let autoSlide = setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    goToSlide(currentSlide);
+  }, 4500);
+  track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+  track.addEventListener('mouseleave', () => {
+    autoSlide = setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }, 4500);
+  });
+
+  /* ── FORM ── */
+  function handleForm(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+    }, 1200);
+  }
+
+  /* ── SMOOTH SCROLL ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = header.offsetHeight;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
